@@ -26,20 +26,13 @@ def mprobability(k):
 
 
 def fermat(N,k):
-    # You will need to implement this function and change the return value, which should be
-    # either 'prime' or 'composite'.
-	#
-    # To generate random values for a, you will most likley want to use
-    # random.randint(low,hi) which gives a random integer between low and
-    #  hi, inclusive.
-	return 'prime'
-
+    for i in range(k):
+      a = random.randint(2, N)
+      mod = mod_exp(a, N-1, N)
+      if (mod != 1):
+        return "composite"
+    return "prime"
 
 def miller_rabin(N,k):
-    # You will need to implement this function and change the return value, which should be
-    # either 'prime' or 'composite'.
-	#
-    # To generate random values for a, you will most likley want to use
-    # random.randint(low,hi) which gives a random integer between low and
-    #  hi, inclusive.
+    
 	return 'composite'
